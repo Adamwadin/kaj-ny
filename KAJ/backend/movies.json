@@ -1,0 +1,214 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Inception",
+            "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+            "year": 2010,
+            "author": "Christopher Nolan",
+            "director": "Christopher Nolan",
+            "price": 12.99,
+            "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p7825626_p_v8_ae.jpg"
+        },
+        {
+            "id": 2,
+            "name": "The Shawshank Redemption",
+            "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+            "year": 1994,
+            "author": "Stephen King",
+            "director": "Frank Darabont",
+            "price": 9.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "The Godfather",
+            "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+            "year": 1972,
+            "author": "Mario Puzo",
+            "director": "Francis Ford Coppola",
+            "price": 14.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "The Dark Knight",
+            "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+            "year": 2008,
+            "author": "Jonathan Nolan",
+            "director": "Christopher Nolan",
+            "price": 11.99,
+            "image": "https://musicart.xboxlive.com/7/abb02f00-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+        },
+        {
+            "id": 5,
+            "name": "Pulp Fiction",
+            "description": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+            "year": 1994,
+            "author": "Quentin Tarantino",
+            "director": "Quentin Tarantino",
+            "price": 10.99,
+            "image": "https://static.posters.cz/image/750/poster/pulp-fiction-cover-i1288.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Schindler's List",
+            "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+            "year": 1993,
+            "author": "Thomas Keneally",
+            "director": "Steven Spielberg",
+            "price": 13.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Fight Club",
+            "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+            "year": 1999,
+            "author": "Chuck Palahniuk",
+            "director": "David Fincher",
+            "price": 8.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Forrest Gump",
+            "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
+            "year": 1994,
+            "author": "Winston Groom",
+            "director": "Robert Zemeckis",
+            "price": 7.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+        },
+        {
+            "id": 9,
+            "name": "The Matrix",
+            "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+            "year": 1999,
+            "author": "The Wachowskis",
+            "director": "The Wachowskis",
+            "price": 12.49,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSjSWOCaw5dnDL2GT1zFd9RMCgUGw5Q2Cfg&s"
+        },
+        {
+            "id": 10,
+            "name": "The Lord of the Rings: The Fellowship of the Ring",
+            "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+            "year": 2001,
+            "author": "J.R.R. Tolkien",
+            "director": "Peter Jackson",
+            "price": 10.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Star Wars: Episode IV - A New Hope",
+            "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station.",
+            "year": 1977,
+            "author": "George Lucas",
+            "director": "George Lucas",
+            "price": 14.49,
+            "image": "https://cdn.kobo.com/book-images/538b1473-6d45-47f4-b16e-32a0a6ba7f9a/353/569/90/False/star-wars-episode-iv-a-new-hope-3.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Gladiator",
+            "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+            "year": 2000,
+            "author": "David Franzoni",
+            "director": "Ridley Scott",
+            "price": 11.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Jurassic Park",
+            "description": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
+            "year": 1993,
+            "author": "Michael Crichton",
+            "director": "Steven Spielberg",
+            "price": 9.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg"
+        },
+        {
+            "id": 14,
+            "name": "The Lion King",
+            "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+            "year": 1994,
+            "author": "Irene Mecchi",
+            "director": "Roger Allers",
+            "price": 8.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Interstellar",
+            "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+            "year": 2014,
+            "author": "Jonathan Nolan",
+            "director": "Christopher Nolan",
+            "price": 13.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+        },
+        {
+            "id": 16,
+            "name": "The Silence of the Lambs",
+            "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+            "year": 1991,
+            "author": "Thomas Harris",
+            "director": "Jonathan Demme",
+            "price": 10.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Saving Private Ryan",
+            "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+            "year": 1998,
+            "author": "Robert Rodat",
+            "director": "Steven Spielberg",
+            "price": 12.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "id": 18,
+            "name": "The Green Mile",
+            "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+            "year": 1999,
+            "author": "Stephen King",
+            "director": "Frank Darabont",
+            "price": 9.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_FMjpg_UX1000_.jpg"
+        },
+        {
+            "id": 19,
+            "name": "The Departed",
+            "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+            "year": 2006,
+            "author": "William Monahan",
+            "director": "Martin Scorsese",
+            "price": 11.99,
+            "image": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Braveheart",
+            "description": "Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",
+            "year": 1995,
+            "author": "Randall Wallace",
+            "director": "Mel Gibson",
+            "price": 10.49,
+            "image": "https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+        },
+        {
+            "id": 21,
+            "name": "The Social Network",
+            "description": "The story of the founders of the social-networking website, Facebook.",
+            "year": 2010,
+            "author": "Aaron Sorkin",
+            "director": "David Fincher",
+            "price": 10.49,
+            "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/The_Social_Network_film_poster.png"
+        }
+    ]
+}
