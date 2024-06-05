@@ -12,16 +12,7 @@ interface Movie {
     price: number;
     image: string; }
 
- function App() {
-
-    const [movies, setMovies] = useState<Movie[]>([]);
-
-    useEffect(() => {
-        fetch("localhost:3000/movies")
-            .then((response) => response.json())
-            .then((data) => setMovies(data));
-    }, []);
-
+function App() {
   return (
   
     <div className="App">
