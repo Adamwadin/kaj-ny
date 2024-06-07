@@ -6,11 +6,8 @@ const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRmanV2aGx5a2xuaWpha2lscHRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY4OTQ3MzAsImV4cCI6MjAzMjQ3MDczMH0.3GI04pbFSeLLDaf7TviiKtnw59kluc5s32e2ghevhlc"
 );
 
-const AuthContext = createContext({
-  session: null,
-  useAuth: () => {},
-  logout: () => {},
-});
+const AuthContext = createContext();
+
 export const AuthProvider = ({ children }) => {
   const [session, setSession] = useState(null);
 

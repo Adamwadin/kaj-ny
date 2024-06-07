@@ -12,7 +12,7 @@ function Movies() {
 
 
   
-  const [movies, setMovies] = useState<Movie[]>([ ]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   
 
   useEffect(() => {
