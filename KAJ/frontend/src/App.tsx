@@ -1,28 +1,19 @@
 
-import React, { useEffect, useState } from "react";
+import Movies from "./components/movies";
 
 import "./App.css";
+import Loginsession from "./components/loginsession";
 
-interface Movie {
-    id: number;
-    name: string;
-    description: string;
-    author: string;
-   director: string;
-    price: number;
-    image: string; }
+
+
 
 function App() {
+
+
   return (
+
+  <><Loginsession /><Movies /></>
   
-    <div className="App">
-      <header className="App-header">
-        <h1>KAJ</h1>
-        <p>Frontend</p>
-      </header>
-    </div>
-
-
    
   );
 }
