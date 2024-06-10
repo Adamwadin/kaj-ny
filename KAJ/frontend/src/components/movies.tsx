@@ -4,10 +4,6 @@ import Movie from "../interfaces/Movie";
 
 
 
-
-
-
-
 function Movies() {
 
 
@@ -17,9 +13,7 @@ function Movies() {
 
   useEffect(() => {
 
-
-    
-      fetch('http://localhost:3000/movies')
+      fetch('http://localhost:5000/movies')
         .then((res) => res.json())
         .then((data) => {
           setMovies(data.movies);
@@ -29,10 +23,7 @@ function Movies() {
 
   }, []);
   
-
-
   return (
-
     <div className="App">
       <header className="App-header">
         <h1>Movies</h1>
