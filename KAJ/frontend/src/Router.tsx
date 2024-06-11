@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         element: <App />,
         index: true,
       },
-      { path: "/details", element: <MovieDetails /> },
+      { path: "/details/:movieId", element: <MovieDetails /> },
     ],
   },
 ]);

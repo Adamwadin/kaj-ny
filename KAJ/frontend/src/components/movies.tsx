@@ -32,7 +32,7 @@ function Movies() {
               <p>Price: {movie.price} €</p>
               <button
                 onClick={() => {
-                  navigate("/details");
+                  navigate("/details/" + movie.id);
                 }}
               >
                 Read More
