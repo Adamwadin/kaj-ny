@@ -199,6 +199,16 @@
             "director": "Mel Gibson",
             "price": 10.49,
             "image": "https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Barbie",
+            "description": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+            "year": 2023,
+            "author": "Greta Gerwig, Noah Baumbach",
+            "director": "Greta Gerwig",
+            "price": 99.99,
+            "image": "https://i-viaplay-com.akamaized.net/viaplay-prod/321/788/1698071114-d4fc98eec6b0680a7c19a8e7c9a59f29f3b8c1f8.jpg?width=400&height=600"
         }
     ]
 }

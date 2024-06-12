@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Movie from "../interfaces/Movie";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Movies() {
@@ -12,6 +11,7 @@ function Movies() {
       .then((data) => {
         setMovies(data.movies);
         console.log(data.movies);
+        localStorage.setItem("moviesList", JSON.stringify(data.movies));
       });
   }, []);
 
