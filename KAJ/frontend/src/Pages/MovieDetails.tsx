@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Movie from "../interfaces/Movie";
+import "../App.css";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -25,7 +26,7 @@ export const MovieDetails = () => {
   }
 
   return (
-    <div>
+    <>
       <button
         onClick={() => {
           navigate(-1);
@@ -33,17 +34,25 @@ export const MovieDetails = () => {
       >
         Go back
       </button>
-      <h1>{movie.name}</h1>;
-      <img src={movie.image} alt={movie.name} />
-      <p>{movie.description}</p>
-      <button
-        onClick={() => {
-          navigate("/" + movie.id);
-        }}
-      >
-        Buy now {movie.price}
-      </button>
-    </div>
+      <h1>{movie.name}</h1>
+      <div className="movie-detail">
+        <div className="detail-image-container">
+          <img src={movie.image} alt={movie.name} />
+        </div>
+        <div className="detail-content">
+          <p>{movie.description}</p>
+          <div className="detail-button-container">
+            <button
+              onClick={() => {
+                navigate("/" + movie.id);
+              }}
+            >
+              Buy now {movie.price}
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

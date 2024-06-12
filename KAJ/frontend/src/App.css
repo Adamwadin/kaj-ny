@@ -1,16 +1,21 @@
 .App {
   text-align: center;
+}
 
+main {
+  background-color: #282c34;
+  color: white;
+  border: 1px solid #333;
 }
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  color: white;
+
+  /* color: white; */
 }
 .movies {
   display: flex;
@@ -20,18 +25,62 @@
   margin-top: 20px;
   padding: 20px;
   background-color: #282c34;
-
-
 }
-.movie{
- 
+.movie {
   margin: 10px;
   padding: 10px;
-  border: 1px solid #333;
+
   border-radius: 5px;
   width: 200px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* ________________________________________ */
+
+.movie-detail {
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+  padding: 20px;
+  border: 2px solid #5d5d5d;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: white;
+}
+.detail-image-container {
+  margin: 20px;
+  width: auto;
+}
+.detail-image-container img {
+  max-height: 500px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.detail-content {
+  text-align: left;
+  max-width: 500px;
+  padding: 20px;
+  justify-content: center;
+}
+.detail-content p {
+  margin: 1px 0;
+}
+.detail-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.detail-button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #39bd25;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.detail-button-container button:hover {
+  background-color: #0056b3;
 }
