@@ -1,12 +1,14 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 
+
+
+const AuthContext = createContext();
+
 const supabase = createClient(
   "https://dfjuvhlyklnijakilptc.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRmanV2aGx5a2xuaWpha2lscHRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY4OTQ3MzAsImV4cCI6MjAzMjQ3MDczMH0.3GI04pbFSeLLDaf7TviiKtnw59kluc5s32e2ghevhlc"
 );
-
-const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [session, setSession] = useState(null);
@@ -34,6 +36,7 @@ export const AuthProvider = ({ children }) => {
         sessionStorage.removeItem("supabase.session");
       }
     });
+    
 
     return () => subscription.unsubscribe();
   }, []);
@@ -42,10 +45,11 @@ export const AuthProvider = ({ children }) => {
     await supabase.auth.signOut();
     setSession(null);
     sessionStorage.removeItem("supabase.session");
-  };
+  }
 
+ 
   return (
-    <AuthContext.Provider value={{ session, logout }}>
+    <AuthContext.Provider value={{ session, logout, supabase }}>
       {children}
     </AuthContext.Provider>
   );

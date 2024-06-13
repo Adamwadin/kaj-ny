@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "nodemailer": "^6.9.13",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.15",
+    "@types/react-helmet": "^6.1.11"
+  }
+}
