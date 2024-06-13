@@ -31,8 +31,9 @@ export const MovieDetails = () => {
         onClick={() => {
           navigate(-1);
         }}
+        className="go-back-button"
       >
-        Go back
+        🔙
       </button>
       <h1>{movie.name}</h1>
       <div className="movie-detail">

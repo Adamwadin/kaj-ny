@@ -7,6 +7,10 @@ main {
   color: white;
   border: 1px solid #333;
 }
+
+h1 {
+  text-align: center;
+}
 .App-header {
   /* background-color: #282c34; */
   height: fit-content;
@@ -40,10 +44,18 @@ main {
 
 /* ________________________________________ */
 
+.go-back-button {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 20px;
+  background-color: white;
+  width: 70px;
+}
+
 .movie-detail {
   display: flex;
   flex-direction: row;
-  margin: 100px;
+  margin: 50px;
   padding: 20px;
   border: 2px solid #5d5d5d;
   border-radius: 5px;
@@ -76,11 +88,12 @@ main {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #39bd25;
+
+  background-color: #0056b3;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 .detail-button-container button:hover {
-  background-color: #0056b3;
+  background-color: #39bd25;
 }
