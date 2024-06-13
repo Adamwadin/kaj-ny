@@ -6,7 +6,6 @@ import Loginsession from "./components/loginsession";
 import Contactform from "./components/Contactemail";
 
 
-
 function App() {
   return (
     <>
@@ -26,6 +25,7 @@ function App() {
       <GoogleMap />
       <Contactform />
       <Movies />
+      
     </>
   );
 }

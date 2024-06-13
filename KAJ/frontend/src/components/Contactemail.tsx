@@ -60,7 +60,10 @@ const ContactForm: React.FC = () => {
         required
       />
     </div>
+    <p>skickar mailet till <a href="https://ethereal.email/">https://ethereal.email/</a> med inloggning user: 'ubaldo61@ethereal.email',
+    pass: '6NNEjtwWjme8ecAExw', Gå sedan in på messages.</p>
     <button id="submit-button" className="btn btn-primary" type="submit">Send</button>
+
   </form>
   
   );

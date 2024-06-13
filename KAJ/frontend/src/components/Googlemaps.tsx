@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+
 const GoogleMap: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
   const [loading, setLoading] = useState(true);
@@ -57,7 +58,7 @@ const GoogleMap: React.FC = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  return <div ref={mapRef} style={{ width: '100%', height: '500px' }}></div>;
+  return <div ref={mapRef} style={{ width: '50%', height: '500px', left: '25%' }}></div>;
 };
 
 export default GoogleMap;
