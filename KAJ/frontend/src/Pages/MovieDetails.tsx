@@ -21,6 +21,13 @@ export const MovieDetails = () => {
 
   const navigate = useNavigate();
 
+  const handleClick = (movie: any) => {
+    navigate(
+      `/checkout?products=` +
+        JSON.stringify({ id: movie.id, price: movie.price })
+    );
+  };
+
   if (!movie) {
     return <p>Loading...</p>;
   }
@@ -43,13 +50,11 @@ export const MovieDetails = () => {
         <div className="detail-content">
           <p>{movie.description}</p>
           <div className="detail-button-container">
-            <button
-              onClick={() => {
-                navigate("/" + movie.id);
-              }}
-            >
-              Buy now {movie.price}
-            </button>
+            <p>
+              <button onClick={() => handleClick(movie)}>
+                {movie.price} Sek - Köp nu
+              </button>
+            </p>
           </div>
         </div>
       </div>

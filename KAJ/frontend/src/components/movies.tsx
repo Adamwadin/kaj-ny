@@ -53,7 +53,7 @@ const MainPage: React.FC = () => {
   return (
     <div className="MainPage">
       <div className="data-container">
-        {currentPageData.map((movie) => (
+        {movies.map((movie) => (
           <div key={movie.id} className="item">
             <img src={movie.image} alt={movie.name} className="movie-image" />
             <div className="movie-details">
@@ -79,7 +79,7 @@ const MainPage: React.FC = () => {
               </button>
               <p>
                 <button onClick={() => handleClick(movie)}>
-                  €{movie.price} - Köp nu
+                  {movie.price} Sek - Köp nu
                 </button>
               </p>
             </div>
