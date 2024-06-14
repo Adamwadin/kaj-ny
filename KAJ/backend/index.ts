@@ -32,10 +32,14 @@ const stripe = new Stripe(
 interface Item {
   id: string;
   quantity: number;
+  price: number;
 }
 
 const calculateOrderAmount = (items: Item[]): number => {
-  return 1400;
+  return items.reduce(
+    (total, item) => total + Number(item.price) * item.quantity,
+    0
+  );
 };
 
 app.post(
@@ -45,13 +49,18 @@ app.post(
       currency,
       paymentMethodType,
       paymentMethodOptions,
+      items,
     }: {
       currency: string;
       paymentMethodType: string;
       paymentMethodOptions?: object;
+      items: { price: number; quantity: number };
     } = req.body;
 
-    let orderAmount = 190000;
+    console.log("last");
+    console.log(items.price);
+
+    let orderAmount = Number(items.price) * 100;
     let params: Stripe.PaymentIntentCreateParams;
 
     // console.log("called intent");

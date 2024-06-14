@@ -19,7 +19,7 @@ const MainPage: React.FC = () => {
 
   useEffect(() => {
     const callApi = async () => {
-      let call = await fetch("http://localhost:3001/movies", {
+      let call = await fetch(`http://localhost:3001/movies`, {
         method: "GET",
       });
 
