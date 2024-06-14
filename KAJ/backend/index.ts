@@ -53,11 +53,11 @@ app.post(
     let orderAmount = 190000;
     let params: Stripe.PaymentIntentCreateParams;
 
-    console.log("called intent");
+    // console.log("called intent");
     params = {
       // payment_method_types:
       //   paymentMethodType === "link" ? ["link", "card"] : [paymentMethodType],
-      payment_method_types: ["card"],
+      payment_method: 'pm_card_mastercard',
       amount: orderAmount,
       currency: "sek",
     };
@@ -75,7 +75,7 @@ app.post(
         nextAction: paymentIntent.next_action,
       });
 
-      console.log(paymentIntent);
+      // console.log(paymentIntent);
     } catch (e) {
       res.status(400).send({
         // error: {
@@ -87,7 +87,6 @@ app.post(
 );
 
 app.get("/movies", (req: Request, res: Response) => {
-  console.log();
   res.sendFile(path.join(__dirname, "../backend/movies.json"));
 });
 
