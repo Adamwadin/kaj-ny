@@ -13,8 +13,8 @@ function Movies() {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/checkout");
+  const handleClick = (movie : any) => {
+    navigate(`/checkout?products=` + JSON.stringify({id: movie.id, price: movie.price}));
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function Movies() {
               <p>Director: {movie.director}</p>
               <p>Year: {movie.year}</p>
               <p>
-                <button onClick={handleClick}>€{movie.price} - Köp nu</button>
+                <button onClick={() => handleClick(movie)}>€{movie.price} - Köp nu</button>
               </p>
             </div>
           ))}

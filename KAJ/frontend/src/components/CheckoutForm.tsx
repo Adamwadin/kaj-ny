@@ -26,6 +26,9 @@ export default function CheckoutForm() {
     }
 
     stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+
+
+      console.log(paymentIntent)
       if (!paymentIntent) {
         setMessage("Something went wrong.");
         return;

@@ -5,7 +5,7 @@ import CheckoutForm from "../components/CheckoutForm";
 import { useLocation } from "react-router-dom";
 
 const stripePromise = loadStripe(
-  "pk_test_51PJEZvRvdqCDotXI09aONw6ac9lAO9pmMNYHUlOZ7U8tCv2V0y6OkuiVJfU5V8J8vcIKlB3iep35feOOkCAMS9Vk0078rcmY6I"
+  "pk_test_51PIrfLRpqezBlhwYBoU2drHiDmH7PPKjY1qq5gt2Rum3NOj92CrJdCY6X05u3sdSmpvL84Y9rR0E3pxjio9O5Cdx00YSvE6JsF"
 );
 
 function useQuery() {
@@ -16,7 +16,6 @@ export default function Checkout() {
   const [clientSecret, setClientSecret] = useState("");
   let query = useQuery();
   let products = query.get("products");
-  console.log(products);
 
   useEffect(() => {
     const callApi = async () => {
@@ -26,7 +25,6 @@ export default function Checkout() {
       } else {
         parsedProducts = []; // or handle the null case appropriately
       }
-      console.log(parsedProducts);
 
       try {
         let response = await fetch(
@@ -40,7 +38,6 @@ export default function Checkout() {
 
         let json = await response.json();
 
-        console.log(json);
         setClientSecret(json.clientSecret);
       } catch (error) {
         console.error("Error creating payment intent:", error);
@@ -48,7 +45,7 @@ export default function Checkout() {
     };
 
     callApi();
-  }, [products]);
+  }, []);
 
   const appearance = {
     theme: "stripe" as "stripe",
@@ -59,6 +56,8 @@ export default function Checkout() {
     appearance,
   };
 
+
+  // console.log(clientSecret)
   return (
     <div className="App">
       {clientSecret && (
