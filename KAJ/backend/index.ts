@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import path from "path";
 import cors from "cors";
 import Stripe from "stripe";
@@ -58,7 +58,7 @@ app.post(
     params = {
       // payment_method_types:
       //   paymentMethodType === "link" ? ["link", "card"] : [paymentMethodType],
-      payment_method: 'pm_card_mastercard',
+      payment_method: "pm_card_mastercard",
       amount: orderAmount,
       currency: "sek",
     };
@@ -88,78 +88,70 @@ app.post(
 );
 
 app.get("/movies", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, ''../backend/movies.json'));
+  res.sendFile(path.join(__dirname, "../backend/movies.json"));
 });
 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-
-app.get('/', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+app.get("/", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
-app.get('*', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+app.get("*", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
-app.post('/api/contact', (req, res) => {
+app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
 
-  
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+    host: "smtp.ethereal.email",
     port: 587,
     auth: {
-        user: 'ubaldo61@ethereal.email',
-        pass: '6NNEjtwWjme8ecAExw'
-    }
-});
+      user: "ubaldo61@ethereal.email",
+      pass: "6NNEjtwWjme8ecAExw",
+    },
+  });
 
-  
   const mailOptions = {
     from: email,
-    to: 'ubaldo61@ethereal.email', 
-    subject: 'ubaldo61@ethereal.email',
+    to: "ubaldo61@ethereal.email",
+    subject: "ubaldo61@ethereal.email",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
-  
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).send(error.toString());
     }
-    res.status(200).send('Email sent: ' + info.response);
+    res.status(200).send("Email sent: " + info.response);
   });
 });
 
-app.post('/api/contact', (req, res) => {
+app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
 
-  
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+    host: "smtp.ethereal.email",
     port: 587,
     auth: {
-        user: 'ubaldo61@ethereal.email',
-        pass: '6NNEjtwWjme8ecAExw'
-    }
-});
+      user: "ubaldo61@ethereal.email",
+      pass: "6NNEjtwWjme8ecAExw",
+    },
+  });
 
-  
   const mailOptions = {
     from: email,
-    to: 'ubaldo61@ethereal.email', 
-    subject: 'ubaldo61@ethereal.email',
+    to: "ubaldo61@ethereal.email",
+    subject: "ubaldo61@ethereal.email",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
-  
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).send(error.toString());
     }
-    res.status(200).send('Email sent: ' + info.response);
+    res.status(200).send("Email sent: " + info.response);
   });
 });
 

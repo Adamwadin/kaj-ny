@@ -1,5 +1,4 @@
 // src/pages/MainPage.tsx
-import React, { useState, useEffect } from "react";
 import Movie from "../interfaces/Movie";
 import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
@@ -12,23 +11,8 @@ const stripePromise = loadStripe(
   "pk_test_51PIrfLRpqezBlhwYBoU2drHiDmH7PPKjY1qq5gt2Rum3NOj92CrJdCY6X05u3sdSmpvL84Y9rR0E3pxjio9O5Cdx00YSvE6JsF"
 );
 
-const [data, setData] = useState<Movie[]>([]);
-const [currentPage, setCurrentPage] = useState(1);
-const itemsPerPage = 5;
-
-function Movies() {
-  const [movies, setMovies] = useState<Movie[]>([]);
-
-  const navigate = useNavigate();
-
-  const handleClick = (movie : any) => {
-    navigate(`/checkout?products=` + JSON.stringify({id: movie.id, price: movie.price}));
-  };
-import Pagination from "./paging";
-import "../index.css";
-import { useNavigate } from "react-router-dom";
-
 const MainPage: React.FC = () => {
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [data, setData] = useState<Movie[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
@@ -48,6 +32,13 @@ const MainPage: React.FC = () => {
   }, []);
 
   const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  const handleClick = (movie: any) => {
+    navigate(
+      `/checkout?products=` +
+        JSON.stringify({ id: movie.id, price: movie.price })
+    );
+  };
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -87,7 +78,9 @@ const MainPage: React.FC = () => {
                 Read More
               </button>
               <p>
-                <button onClick={() => handleClick(movie)}>€{movie.price} - Köp nu</button>
+                <button onClick={() => handleClick(movie)}>
+                  €{movie.price} - Köp nu
+                </button>
               </p>
             </div>
           </div>
