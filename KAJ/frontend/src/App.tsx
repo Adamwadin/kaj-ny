@@ -24,10 +24,10 @@ function App() {
         </script>
       </Helmet>
       <Loginsession />
-      <GoogleMap />
 
       <MainPage />
       <Contactform />
+      <GoogleMap />
     </>
   );
 }
