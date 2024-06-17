@@ -1,10 +1,8 @@
-// src/pages/MainPage.tsx
-import Movie from "../interfaces/Movie";
 import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Pagination from "./paging";
+import Pagination from "../components/paging"; // Correct the import path
+import Movie from "../interfaces/Movie";
 import "../index.css";
 
 const stripePromise = loadStripe(
@@ -13,27 +11,29 @@ const stripePromise = loadStripe(
 
 const MainPage: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [data, setData] = useState<Movie[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const callApi = async () => {
-      let call = await fetch(`http://localhost:3001/movies`, {
-        method: "GET",
-      });
-
-      let json = await call.json();
-
-      setMovies(json.movies);
+      try {
+        let call = await fetch(`http://localhost:3001/movies`, {
+          method: "GET",
+        });
+        let json = await call.json();
+        setMovies(json.movies);
+      } catch (error) {
+        console.error("Failed to fetch movies:", error);
+      }
     };
 
     callApi();
   }, []);
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const totalPages = Math.ceil(movies.length / itemsPerPage);
 
-  const handleClick = (movie: any) => {
+  const handleClick = (movie: Movie) => {
     navigate(
       `/checkout?products=` +
         JSON.stringify({ id: movie.id, price: movie.price })
@@ -46,14 +46,12 @@ const MainPage: React.FC = () => {
 
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  const currentPageData = data.slice(start, end);
-
-  const navigate = useNavigate();
+  const currentPageData = movies.slice(start, end);
 
   return (
     <div className="MainPage">
       <div className="data-container">
-        {movies.map((movie) => (
+        {currentPageData.map((movie) => (
           <div key={movie.id} className="item">
             <img src={movie.image} alt={movie.name} className="movie-image" />
             <div className="movie-details">
@@ -70,11 +68,7 @@ const MainPage: React.FC = () => {
               <p>
                 <strong>Price:</strong> ${movie.price}
               </p>
-              <button
-                onClick={() => {
-                  navigate("/details/" + movie.id);
-                }}
-              >
+              <button onClick={() => navigate("/details/" + movie.id)}>
                 Read More
               </button>
               <p>
