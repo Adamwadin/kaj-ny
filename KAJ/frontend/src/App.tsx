@@ -25,8 +25,9 @@ function App() {
       </Helmet>
       <Loginsession />
       <GoogleMap />
-      <Contactform />
+
       <MainPage />
+      <Contactform />
     </>
   );
 }

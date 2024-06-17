@@ -68,7 +68,11 @@ const MainPage: React.FC = () => {
               <p>
                 <strong>Price:</strong> ${movie.price}
               </p>
-              <button onClick={() => navigate("/details/" + movie.id)}>
+              <button
+                onClick={() => {
+                  navigate("/details/" + movie.id);
+                }}
+              >
                 Read More
               </button>
               <p>
