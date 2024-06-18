@@ -15,9 +15,7 @@ export const router = createBrowserRouter([
         element: <App />,
         index: true,
       },
-      { path: "/details/:movieId", 
-        element: <MovieDetails /> 
-      }, 
+      { path: "/movies/:movieId", element: <MovieDetails /> },
       {
         path: "/checkout",
         element: <Checkout />,

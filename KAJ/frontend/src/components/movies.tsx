@@ -70,7 +70,7 @@ const MainPage: React.FC = () => {
               </p>
               <button
                 onClick={() => {
-                  navigate("/details/" + movie.id);
+                  navigate("/movies/" + movie.id);
                 }}
               >
                 Read More

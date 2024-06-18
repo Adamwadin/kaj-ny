@@ -100,6 +100,10 @@ app.get("/movies", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "../backend/movies.json"));
 });
 
+app.get("/movies/movieid", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../backend/movies.json"));
+});
+
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("/", (req: Request, res: Response) => {
