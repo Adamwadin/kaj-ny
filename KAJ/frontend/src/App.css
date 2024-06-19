@@ -147,7 +147,11 @@ form {
   margin: 24px;
 }
 
-/* Buttons and links */
+.purchaseBtn {
+  width: 200px;
+  height: 50px;
+}
+
 button {
   background: #5469d4;
   font-family: Arial, sans-serif;
@@ -173,7 +177,6 @@ button:disabled {
   cursor: default;
 }
 
-/* spinner/processing state, errors */
 .spinner,
 .spinner:before,
 .spinner:after {

@@ -78,7 +78,10 @@ export const MovieDetails = () => {
           <p>{movie.description}</p>
           <div className="detail-button-container">
             <p>
-              <button onClick={() => handleClick(movie)}>
+              <button
+                className="purchaseBtn"
+                onClick={() => handleClick(movie)}
+              >
                 {movie.price} Sek - Köp nu
               </button>
             </p>

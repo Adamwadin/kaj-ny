@@ -17,28 +17,28 @@ code {
     monospace;
 }
 
-/* src/pages/MainPage.css */
 .MainPage {
   text-align: center;
 }
 
-/* Data Container */
+
 .data-container {
   margin: 20px auto;
-  width: 80%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
-/* Item Styles */
 .item {
+  width: 35%;
   border: 1px solid #ddd;
   padding: 20px;
-  margin: 10px 0;
+  margin: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -50,9 +50,9 @@ code {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Movie Image */
 .movie-image {
-  max-width: 150px;
+  height: 250px;
+  width: auto;
   margin-right: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -62,7 +62,6 @@ code {
   transform: scale(1.1);
 }
 
-/* Movie Details */
 .movie-details {
   text-align: left;
   flex-grow: 1;
@@ -80,6 +79,8 @@ code {
 }
 
 .movie-details button {
+  height: 40px;
+  width: 200px;
   padding: 10px 15px;
   font-size: 1rem;
   font-weight: bold;
@@ -98,7 +99,6 @@ code {
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
 }
 
-/* Pagination Container */
 .pagination {
   display: flex;
   justify-content: center;
@@ -106,15 +106,16 @@ code {
   margin: 20px 0;
 }
 
-/* Pagination Buttons */
 .pagination button {
+  height: 50px;
+  width: 100px;
   margin: 0 5px;
   padding: 10px 15px;
   font-size: 1rem;
   font-weight: bold;
-  border: 1px solid #007bff;
+  border: 1px solid darkgray;
   border-radius: 6px;
-  background-color: #007bff;
+  background-color: darkgray;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease,
@@ -122,7 +123,7 @@ code {
 }
 
 .pagination button:hover {
-  background-color: #0056b3;
+  background-color: #474848;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
@@ -174,7 +175,6 @@ code {
   outline: none;
 }
 
-/* Button Styles */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -199,7 +199,6 @@ code {
   transform: translateY(-3px);
 }
 
-/* Logout Container and Button Styles */
 #logout-container,
 .logout-container {
   display: flex;
@@ -216,7 +215,7 @@ code {
   text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
-  background: linear-gradient(145deg, #007bff, #0056b3);
+  background: linear-gradient(145deg, #474848, #474850);
   color: white;
   border: none;
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
@@ -225,10 +224,10 @@ code {
 
 #logout-button:hover,
 .logout-button:hover {
-  background: linear-gradient(145deg, #0056b3, #007bff);
+  background: linear-gradient(145deg, #474848, #474850);
   transform: translateY(-3px);
 }
-/* General Styles */
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f4f7f6;
@@ -236,7 +235,6 @@ body {
   padding: 0;
 }
 
-/* Navigation Bar */
 #navbar {
   display: flex;
   justify-content: space-between;
