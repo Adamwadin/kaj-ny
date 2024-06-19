@@ -1,0 +1,13 @@
+För att starta server - npm run serve
+För att starta react npm start
+
+Du bör kunna logga in med ditt google-konto.
+
+Adam:
+Supabase, Google Analytics, Google Maps, Tag Manager, Kontaktformulär, CSS
+
+Kriss:
+Moviedetails page (fetch i frontend och get i backend), CSS
+
+Johan:
+Implementerat Stripe, checkout form, checkout page, och fetch för att visa film vid checkout, CSS

@@ -3,7 +3,6 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 import { useLocation } from "react-router-dom";
-import Movie from "../interfaces/Movie";
 
 const stripePromise = loadStripe(
   "pk_test_51PIrfLRpqezBlhwYBoU2drHiDmH7PPKjY1qq5gt2Rum3NOj92CrJdCY6X05u3sdSmpvL84Y9rR0E3pxjio9O5Cdx00YSvE6JsF"
@@ -12,7 +11,6 @@ const stripePromise = loadStripe(
 interface IMovie {
   id: number;
   name: string;
-  director: string;
   price: number;
   image: string;
 }
@@ -32,7 +30,7 @@ export default function Checkout() {
       if (products) {
         parsedProducts = JSON.parse(products);
       } else {
-        parsedProducts = []; // or handle the null case appropriately
+        parsedProducts = [];
       }
 
       const movieId = parsedProducts.id;
@@ -72,7 +70,6 @@ export default function Checkout() {
     appearance,
   };
 
-  // console.log(clientSecret)
   return (
     <div className="App">
       <h2>Du köper:</h2>
