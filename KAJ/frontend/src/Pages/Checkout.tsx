@@ -76,6 +76,9 @@ export default function Checkout() {
   return (
     <div className="App">
       <h2>Du köper:</h2>
+      <div className="checkoutMovieContainer">
+        <img src={movieDetails?.image} />
+      </div>
       <h3>{movieDetails?.name}</h3>
       <span>{movieDetails?.price} sek</span>
       {clientSecret && (

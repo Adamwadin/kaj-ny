@@ -114,6 +114,16 @@ body {
   width: 100vw;
 }
 
+.checkoutMovieContainer {
+  height: 300px;
+  width:auto;
+}
+
+img {
+  height: 280px;
+  width: auto;
+}
+
 form {
   width: 30vw;
   min-width: 500px;
