@@ -4,6 +4,7 @@ import path from "path";
 import cors from "cors";
 import Stripe from "stripe";
 import bodyParser from "body-parser";
+import fs from "fs";
 
 const app = express();
 const port = 3001;
@@ -33,6 +34,17 @@ interface Item {
   id: string;
   quantity: number;
   price: number;
+}
+
+interface Movie {
+  id: number;
+  name: string;
+  description: string;
+  year: number;
+  author: string;
+  director: string;
+  price: number;
+  image: string;
 }
 
 const calculateOrderAmount = (items: Item[]): number => {
@@ -100,8 +112,47 @@ app.get("/movies", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "../backend/movies.json"));
 });
 
-app.get("/movies/movieid", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "../backend/movies.json"));
+//sortera ut filmen med rätt id och returnera.
+app.get("/movies/:id", (req: Request, res: Response) => {
+  const movieId = parseInt(req.params.id, 10);
+  console.log(`Fetching movie with id: ${movieId}`); // Log to indicate the function is called
+
+  const filePath = path.join(__dirname, "../backend/movies.json");
+
+  fs.readFile(filePath, "utf-8", (err, data) => {
+    if (err) {
+      console.error("Failed to read movies data:", err);
+      res.status(500).send({ error: "Failed to read movies data" });
+      return;
+    }
+
+    try {
+      const moviesData = JSON.parse(data);
+
+      // Check if the movies property exists and is an array
+      if (!moviesData || !Array.isArray(moviesData.movies)) {
+        console.error("Parsed data is not an array");
+        res.status(500).send({ error: "Parsed data is not an array" });
+        return;
+      }
+
+      const movies = moviesData.movies as Movie[];
+      console.log(`Movies array length: ${movies.length}`); // Log the length of the movies array
+
+      const movie = movies.find((m) => m.id === movieId);
+
+      if (movie) {
+        console.log(`Found movie: ${movie.name}`); // Log the found movie
+        res.json(movie);
+      } else {
+        console.log("Movie not found");
+        res.status(404).send({ error: "Movie not found" });
+      }
+    } catch (parseError) {
+      console.error("Failed to parse movies data:", parseError);
+      res.status(500).send({ error: "Failed to parse movies data" });
+    }
+  });
 });
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));

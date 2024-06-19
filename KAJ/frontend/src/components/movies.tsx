@@ -31,6 +31,7 @@ const MainPage: React.FC = () => {
     callApi();
   }, []);
 
+  console.log("NURÅ?", movies);
   const totalPages = Math.ceil(movies.length / itemsPerPage);
 
   const handleClick = (movie: Movie) => {
